@@ -7,13 +7,12 @@
 - Enum 클래스형을 기반으로 한 클래스형 선언
 - 새로운 열거형을 선언하면, 내부적으로 Enum 클래스형 기반의 새로우누 클래스형이 만들어짐.
 
-
+<br/>
 출처 :
-
-http://woowabros.github.io/tools/2017/07/10/java-enum-uses.html
-
+http://woowabros.github.io/tools/2017/07/10/java-enum-uses.html <br/>
 https://opentutorials.org/module/1226/8025
-      
+
+# Intro
 
 개발을 진행할때 Enum을 통해 얻는 기본적인 장점들은 아래와 같습니다.  
 
