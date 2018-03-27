@@ -11,12 +11,12 @@ import static org.junit.Assert.assertThat;
 public class PayGroupTest {
 
     @Test
-    public void PayTypeAnswer() throws Exception {
+    public void PayTypeTest() throws Exception {
         String payCode = selectPayCode();
         PayGroup payGroup = PayGroup.findByPayCode(payCode);
 
-        assertThat(payGroup.name(), is("KAKAO_PAY"));
-        assertThat(payGroup.getTitle(), is("카카오페이"));
+        assertThat(payGroup.name(), is("CARD"));
+        assertThat(payGroup.getTitle(), is("카드"));
     }
 
 
@@ -24,4 +24,18 @@ public class PayGroupTest {
         return "KAKAO_PAY";
     }
 
+    @Test
+    public void AdvancedPayTypeTest () throws Exception {
+        PayType payType = selectPayType();
+        PayGroupAdvanced payGroupAdvanced = PayGroupAdvanced.findByPayType(payType);
+
+        assertThat(payGroupAdvanced.name(), is("CARD"));
+        assertThat(payGroupAdvanced.getTitle(), is("카드"));
+    }
+
+
+
+    private PayType selectPayType(){
+        return PayType.BAEMIN_PAY;
+    }
 }
